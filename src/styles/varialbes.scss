@@ -1,15 +1,25 @@
-$body-background-light: rgb(204, 230, 238);
+$body-background-light: rgb(193, 216, 248);
 $body-background-dark: rgb(79, 119, 192);
+
+$header-background-light: rgb(151, 189, 247);
+$header-background-dark: rgb(63, 51, 172);
 
 $primary-color-light: rgb(255, 255, 255);
 $primary-color-dark: rgb(0, 0, 0);
 
+$text-color-light: rgb(0, 0, 0);
+$text-color-dark: rgb(255, 255, 255);
+
 :root {
   --body-background: #{$body-background-light};
   --primary-color: #{$primary-color-light};
+  --header-background: #{$header-background-light};
+  --text-color: #{$text-color-light};
 }
 
 html[data-theme='dark'] {
   --body-background: #{$body-background-dark};
   --primary-color: #{$primary-color-dark};
+  --header-background: #{$header-background-dark};
+  --text-color: #{$text-color-dark};
 }

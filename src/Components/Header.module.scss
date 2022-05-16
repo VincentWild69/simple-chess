@@ -1,0 +1,27 @@
+.header {
+  background-color: var(--header-background);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    margin: 5px;
+  }
+
+  .themeSwitch {
+    margin: 5px;
+    border-radius: 2px;
+    // border: 1px solid rgb(132, 157, 209);
+
+    .themeSwitchBtn {
+      background-color: rgb(209, 209, 255);
+      padding: 5px;
+      color: #000;
+      &.active {
+        background-color: rgb(120, 172, 250);
+        font-weight: 500;
+        border: 1px solid rgba(131, 164, 255, 0.836);
+      }
+    }
+  }
+}
