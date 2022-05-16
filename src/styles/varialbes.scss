@@ -1,0 +1,15 @@
+$body-background-light: rgb(204, 230, 238);
+$body-background-dark: rgb(79, 119, 192);
+
+$primary-color-light: rgb(255, 255, 255);
+$primary-color-dark: rgb(0, 0, 0);
+
+:root {
+  --body-background: #{$body-background-light};
+  --primary-color: #{$primary-color-light};
+}
+
+html[data-theme='dark'] {
+  --body-background: #{$body-background-dark};
+  --primary-color: #{$primary-color-dark};
+}
