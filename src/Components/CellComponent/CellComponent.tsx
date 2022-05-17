@@ -1,14 +1,14 @@
 import clsx from 'clsx';
+import { Cell } from '../../Models/Cell';
 import s from './CellComponent.module.scss';
 
 interface ICellComponent {
-  color: string;
+  cell: Cell;
 }
 
-export const CellComponent: React.FC<ICellComponent> = ({color}) => {
+export const CellComponent: React.FC<ICellComponent> = ({cell}) => {
   return (
-    <div className={clsx(s.cell, s[color])}>
-      cell
+    <div className={clsx(s.cell, s[cell.color])}>
     </div>
   );
 }
