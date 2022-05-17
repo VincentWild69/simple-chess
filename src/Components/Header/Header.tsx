@@ -1,8 +1,8 @@
-import { changeDataTheme } from "../utils/changeDataTheme";
 import s from './Header.module.scss';
 import clsx from 'clsx';
 import { GiChessQueen } from 'react-icons/gi';
 import { useState } from "react";
+import { changeDataTheme } from './../../utils/changeDataTheme';
 
 const themesArr: string[] = ['light', 'dark'];
 
@@ -23,5 +23,4 @@ export const Header: React.FC = () => {
       </div>
     </header>
   )
-
 }
