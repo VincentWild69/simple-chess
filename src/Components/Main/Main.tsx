@@ -9,6 +9,7 @@ export const Main: React.FC = () => {
   const restart = (): void => {
     const newBoard = new Board();
     newBoard.initCells();
+    newBoard.addFigures();
     setBoard(newBoard);
   }
 

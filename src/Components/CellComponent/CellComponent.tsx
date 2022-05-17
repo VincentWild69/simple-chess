@@ -9,6 +9,7 @@ interface ICellComponent {
 export const CellComponent: React.FC<ICellComponent> = ({cell}) => {
   return (
     <div className={clsx(s.cell, s[cell.color])}>
+      {cell.figure?.logo && <img src={cell.figure.logo} alt="figure" />}
     </div>
   );
 }
