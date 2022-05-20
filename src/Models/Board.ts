@@ -6,10 +6,13 @@ import { Queen } from './Figures/Queen';
 import { Bishop } from './Figures/Bishop';
 import { Rook } from './Figures/Rook';
 import { Knight } from './Figures/Knight';
+import { Figure } from './Figures/Figure';
 
 export class Board {
 
   cells: Cell[][] = [];
+  lostWhiteFigures: Figure[] = [];
+  lostBlackFigures: Figure[] = [];
 
   public initCells() {
     for (let i = 0; i < 8; i++) {
@@ -22,6 +25,24 @@ export class Board {
         }
       }
       this.cells.push(row);
+    }
+  }
+
+  public getCopyBoard(): Board {
+    const newBoard = new Board();
+    newBoard.cells = this.cells;
+    newBoard.lostBlackFigures = this.lostBlackFigures;
+    newBoard.lostWhiteFigures = this.lostWhiteFigures;
+    return newBoard;
+  }
+
+  public highlihtCells(selectedCell: Cell | null) {
+    for (let i = 0; i < this.cells.length; i++) {
+      const row = this.cells[i];
+      for (let j = 0; j < row.length; j++) {
+        const target = row[j];
+        target.available = !!selectedCell?.figure?.canMove(target);
+      }
     }
   }
 

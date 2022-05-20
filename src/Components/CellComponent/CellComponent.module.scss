@@ -11,6 +11,7 @@
     width: 48px;
     height: 48px;
     position: relative;
+    cursor: pointer;
   }
 }
 
@@ -20,4 +21,19 @@
 
 .white {
   background-color: var(--cell-bg-white);
+}
+
+.selected {
+  background-color: rgb(45 1 247);
+}
+
+.available {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: rgb(186 98 211);
+}
+
+.availableAtack {
+  background-color: rgb(186 98 211);
 }

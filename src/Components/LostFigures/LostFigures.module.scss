@@ -1,0 +1,25 @@
+.lostFigures {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #000;
+
+  h4 {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  .lostFiguresList {
+    display: flex;
+  }
+
+  .lostFigureImg {
+    width: 40px;
+  }
+
+  .lostFigureName {
+    font-size: 12px;
+  }
+}

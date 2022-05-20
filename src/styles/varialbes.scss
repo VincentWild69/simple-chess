@@ -10,6 +10,9 @@ $primary-color-dark: rgb(0, 0, 0);
 $text-color-light: rgb(0, 0, 0);
 $text-color-dark: rgb(255, 255, 255);
 
+$info-text-light: rgb(58, 114, 32);
+$info-text-dark: rgb(155, 240, 116);
+
 
 $cell-bg-white: hsl(60, 23%, 67%);
 $cell-bg-black: hsl(90, 34%, 35%);
@@ -22,6 +25,7 @@ $cell-bg-black: hsl(90, 34%, 35%);
   --text-color: #{$text-color-light};
   --cell-bg-white: #{$cell-bg-white};
   --cell-bg-black: #{$cell-bg-black};
+  --info-text: #{$info-text-light};
 }
 
 html[data-theme='dark'] {
@@ -29,4 +33,5 @@ html[data-theme='dark'] {
   --primary-color: #{$primary-color-dark};
   --header-background: #{$header-background-dark};
   --text-color: #{$text-color-dark};
+  --info-text: #{$info-text-dark};
 }

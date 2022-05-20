@@ -1,5 +1,41 @@
+@import '../../styles/varialbes.scss';
+
 .main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  .restart {
+    margin-top: 1rem;
+    margin-right: 2rem;
+    width: 100%;
+    button {
+      background-color: var(--header-background);
+      padding: 5px;
+      display: block;
+      margin-left: auto;
+      border-radius: 2px;
+    }
+  }
+
+  .curentPlayer {
+    margin-top: 2rem;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--info-text);
+    span {
+      background-color: rgb(114, 157, 72);
+      padding: 1px 3px;
+      border-radius: 2px;
+      border: 1px solid rgba(90, 88, 88, 0.623);
+    }
+  }
+  .timers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
