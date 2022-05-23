@@ -2,7 +2,6 @@ import { Colors } from "./Colors";
 import { Figure } from './Figures/Figure';
 import { Board } from './Board';
 import { v4 as uuidv4 } from 'uuid';
-import { GiTargetArrows } from "react-icons/gi";
 
 export class Cell {
   readonly x: number;

@@ -7,12 +7,14 @@ import { Bishop } from './Figures/Bishop';
 import { Rook } from './Figures/Rook';
 import { Knight } from './Figures/Knight';
 import { Figure } from './Figures/Figure';
+import { v4 as uuidv4 } from 'uuid';
 
 export class Board {
 
   cells: Cell[][] = [];
   lostWhiteFigures: Figure[] = [];
   lostBlackFigures: Figure[] = [];
+  id: string = uuidv4();
 
   public initCells() {
     for (let i = 0; i < 8; i++) {
@@ -33,6 +35,7 @@ export class Board {
     newBoard.cells = this.cells;
     newBoard.lostBlackFigures = this.lostBlackFigures;
     newBoard.lostWhiteFigures = this.lostWhiteFigures;
+    newBoard.id = this.id;
     return newBoard;
   }
 

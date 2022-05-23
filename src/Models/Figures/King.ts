@@ -16,6 +16,31 @@ export class King extends Figure {
     if (!super.canMove(target)) {
       return false;
     }
-    return true;
+    if (target.y === this.cell.y + 1 &&
+      (target.x === this.cell.x 
+        || target.x === this.cell.x + 1 
+        || target.x === this.cell.x - 1)) {
+      return true;
+    }
+    if (target.y === this.cell.y - 1 &&
+      (target.x === this.cell.x 
+        || target.x === this.cell.x + 1 
+        || target.x === this.cell.x - 1)) {
+      return true;
+    }
+    if (target.x === this.cell.x + 1 && target.y === this.cell.y) {
+      return true;
+    }
+    if (target.x === this.cell.x - 1 && target.y === this.cell.y) {
+      return true;
+    }
+
+    const absX = Math.abs(target.x - this.cell.x);
+    const absY = Math.abs(target.y - this.cell.y);
+
+    if(absY !== absX)
+    return false;
+
+    return false;
   }
 }

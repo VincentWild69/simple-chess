@@ -5,9 +5,10 @@ import { useState, useEffect, useRef } from 'react';
 interface ITimer {
   player: Player | null;
   currentPlayer: Player | null;
+  boardId: string;
 }
 
-export const Timer: React.FC<ITimer> = ({player, currentPlayer}) => {
+export const Timer: React.FC<ITimer> = ({player, currentPlayer, boardId}) => {
   const [time, setTime] = useState<number>(300);
   const timer = useRef<null | ReturnType<typeof setInterval>>(null);
 
@@ -27,6 +28,13 @@ export const Timer: React.FC<ITimer> = ({player, currentPlayer}) => {
       startTimer();
     }
   }, [currentPlayer])
+
+  useEffect(() => {
+    if (timer.current) {
+      clearInterval(timer.current)
+    }
+    setTime(300);
+  }, [boardId])
 
   return (
     <div className={s.timer}>

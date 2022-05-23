@@ -36,8 +36,8 @@ export const Main: React.FC = () => {
         Current player: <span style={{color: currentPlayer?.color}}>{currentPlayer?.color}</span>
       </div>
       <div className={s.timers}>
-        <Timer currentPlayer={currentPlayer} player={whitePlayer}/>
-        <Timer currentPlayer={currentPlayer} player={blackPlayer}/>
+        <Timer boardId={board.id} currentPlayer={currentPlayer} player={whitePlayer}/>
+        <Timer boardId={board.id} currentPlayer={currentPlayer} player={blackPlayer}/>
       </div>
       <BoardComponent board={board}
         setBoard={setBoard}
